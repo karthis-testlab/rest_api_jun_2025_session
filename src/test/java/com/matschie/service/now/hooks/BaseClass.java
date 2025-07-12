@@ -1,22 +1,24 @@
-package week4.day2;
+package com.matschie.service.now.hooks;
 
 import static io.restassured.RestAssured.basic;
 
 import org.testng.annotations.BeforeClass;
 
+import com.matschie.api.design.ResponseAPI;
+import com.matschie.service.now.services.IncidentService;
+
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class BaseClass {
+public class BaseClass extends IncidentService {
 	
 	protected String sysId;
-    protected Response response;	
+    protected ResponseAPI response;	
     protected RequestSpecification requestSpec;
 	// Set the all common values
     RequestSpecBuilder builder = new RequestSpecBuilder();
     
-    String update_requestPayload = """
+    protected String update_requestPayload = """
     		{
              "short_description": "REST Update using Put Method",
              "description": "Update existing record from file",

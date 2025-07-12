@@ -25,7 +25,7 @@ public class E2ETestforIncidentTable extends BaseClass {
 	
 	@Test(priority = 3)
 	public void updateExistingRecord() {
-		response = incident.updateExistingRecord(requestSpec, sysId, new File("src/main/resources/request_payload/update_record.json"));
+		response = incident.updateExistingRecord(requestSpec, sysId, update_requestPayload);
 		incident.validateResponse(response, 200, "OK", ContentType.JSON);
 		incident.validateResponseBody(response, "result.sys_id", sysId);
 		incident.validateResponseBody(response, "result.description", "Update existing record from file");

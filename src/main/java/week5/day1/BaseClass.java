@@ -1,17 +1,16 @@
-package week4.day2;
+package week5.day1;
 
 import static io.restassured.RestAssured.basic;
 
 import org.testng.annotations.BeforeClass;
 
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class BaseClass {
+public class BaseClass extends IncidentService {
 	
 	protected String sysId;
-    protected Response response;	
+    protected ResponseAPI response;	
     protected RequestSpecification requestSpec;
 	// Set the all common values
     RequestSpecBuilder builder = new RequestSpecBuilder();

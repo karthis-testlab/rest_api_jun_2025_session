@@ -3,6 +3,23 @@
   <groupId>com.rest.api.jun.2025.session</groupId>
   <artifactId>rest_api_jun_2025_session</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+	<properties>
+		<allure.version>2.24.0</allure.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-bom</artifactId>
+				<version>${allure.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+  
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
@@ -21,6 +38,16 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.11.0</version>			
+		</dependency>
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-rest-assured</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
