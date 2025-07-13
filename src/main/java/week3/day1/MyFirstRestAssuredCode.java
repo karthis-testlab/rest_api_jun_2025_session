@@ -10,7 +10,7 @@ public class MyFirstRestAssuredCode {
 		RestAssured.given()		           
 		           	.baseUri("https://dev265761.service-now.com")
 		           	.basePath("/api/now/table/")
-		           	.auth()
+		           	.auth()		           	
 		           	.basic("admin", "d@9IvhOh5DR*")
 		           	// This will print request information in the console
 		           	.log().all()
